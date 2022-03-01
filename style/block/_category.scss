@@ -1,0 +1,86 @@
+.categories {
+    
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 65px;
+        margin-bottom: 85px;
+    }
+    &-sale {
+        @include main-text (normal,16px,19px);
+        color: $default-white;
+    }
+    &-type {
+        @include main-text (bold,24px,29px);
+        color: $main-pink;
+    }
+}
+
+.categories-item {
+    background-color: #c4c4c4;
+    width: $card-width;
+    height: $card-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    &-1{
+        background-image: url(../img/cardwomen.jpg);
+    }
+    &-2 {
+        background-image: url(../img/cardmen.jpg);
+    }
+    &-3 {
+        background-image: url(../img/cardkid.jpg);
+    }
+    &-4 {
+        margin-top: 30px;
+        width: 100%;
+        height: 180px;
+        background-image: url(../img/cardacc.jpg);
+    }
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+}
+
+/* tablet */
+@media (max-width: 1180px){
+    .categories-wrap {
+        padding-top: 20px;
+    }
+
+    .categories-item {
+        width: 233px;
+        max-height: 167px;
+        background-size: contain;
+    }
+
+    .categories-item-4 {
+        margin-top: 20px;
+        width: 100%;
+        background-size: contain;
+    }
+}
+
+/*mobile*/
+@media (max-width: 797px) {
+    .categories-wrap {
+        justify-content: center;
+        padding-top: 64px;
+        margin-bottom: 64px;
+    }
+    .categories-item {
+        width: 100%;
+        max-height: 247px;
+        margin-bottom: 32px;
+    }
+    .categories-item-4 {
+        max-height: 111px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
